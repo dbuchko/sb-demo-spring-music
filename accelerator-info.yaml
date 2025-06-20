@@ -1,0 +1,30 @@
+id: 58549384-8bd3-4a24-8d5f-02ca11fcd5cb
+name: spring-music
+timestamp: 2025-06-20T19:39:46.455387Z
+source: VSCODE
+username: dbuchko
+fragments:
+  java-version:
+    name: java-version
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/java-version
+      ref: tp-10.2
+  build-wrapper-gradle:
+    name: build-wrapper-gradle
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/build-wrapper-gradle
+      ref: tp-10.2
+accelerator:
+  name: spring-music
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: spring-music
+    ref: tp-10.2
+options:
+  projectName: sb-demo-spring-music
+  persistenceType: jpa
+  databaseType: postgres
+  javaVersion: "21"
+  includeBuildToolWrapper: true
