@@ -7,6 +7,17 @@ management:
     web:
       exposure:
         include: "*"
+  tracing:
+      sampling:
+          probability: 0.5 # NOTE: keep to less than 0.5. This is NOT a supported property for Spring 2.x
+  wavefront:
+      application:
+          name: MY-APPLICATION
+          service-name: MY-SERVICE
+          custom-tags:
+              instance_guid: ${CF_INSTANCE_GUID}
+      api-token: 1111-23this-45is-678a-faketoken # this is a fake token since wavefront lib expects a token, though this is not used for authentication to collector for ingestion
+      uri: http://telegraf.hub-collector.service.internal:8765
   endpoint:
     health:
       show-details: always
