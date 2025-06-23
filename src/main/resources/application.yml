@@ -7,6 +7,9 @@ management:
     web:
       exposure:
         include: "*"
+  info:
+    git:
+      mode: full
   tracing:
       sampling:
           probability: 0.5 # NOTE: keep to less than 0.5. This is NOT a supported property for Spring 2.x

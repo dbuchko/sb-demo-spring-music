@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'eclipse-wtp'
     id 'idea'
+    id "com.gorylenko.gradle-git-properties" version "1.4.17"
 }
 
 group = 'com.vmware.tanzu.samples.music'
